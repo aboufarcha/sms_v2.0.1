@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="909.0" prefWidth="1200.0" style="-fx-border-color: #7baaf9; -fx-border-width: 2px;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WorkerManagementController">
+    <stylesheets>
+        <URL value="@SmsCss.css" />
+    </stylesheets>
+    <children>
+        <AnchorPane prefHeight="6.0" prefWidth="1200.0" style="-fx-background-color: #7baaf9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutY="6.0" prefHeight="34.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1020.0" layoutY="2.0" prefHeight="35.0" prefWidth="166.0" text="لائحة المستخدمين" textFill="#5c5b5b">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-8.0" mnemonicParsing="false" onAction="#closeWindowButton" prefHeight="38.0" prefWidth="63.0" styleClass="closeButton" stylesheets="@SmsCss.css" text="X" textFill="#5c5c5c">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="-4.0" mnemonicParsing="false" onAction="#minimizeWindowButton" prefHeight="26.0" prefWidth="39.0" styleClass="closeButton" text="_" textFill="#5c5c5c">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="backToSMButton" layoutX="110.0" layoutY="851.0" onAction="#goToBackButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الرجوع">
+         <graphic>
+            <ImageView fitHeight="125.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="btnStyle">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutY="44.0" prefHeight="114.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane layoutX="906.0" layoutY="-1.0" prefHeight="126.0" prefWidth="293.0">
+               <children>
+                  <JFXTextField alignment="CENTER_RIGHT" focusColor="#0061ff" labelFloat="true" layoutX="67.0" layoutY="21.0" promptText="بحث بالإسم" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="48.0" layoutY="78.0" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #0061ff;" text="بحث" textFill="#f5f5f5">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        
+                     </effect>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <Glow level="0.55" />
+               </effect>
+            </Pane>
+            <Pane layoutX="611.0" layoutY="-1.0" prefHeight="126.0" prefWidth="294.0">
+               <children>
+                  <JFXButton layoutX="48.0" layoutY="78.0" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #0061ff;" text="بحث" textFill="#fdfdfd">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <effect>
+                       
+                     </effect>
+                  </JFXButton>
+                  <JFXTextField alignment="CENTER_RIGHT" focusColor="#7baaf9" labelFloat="true" layoutX="80.0" layoutY="24.0" promptText="بحث برقم التسجيل" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <effect>
+                  <Glow level="0.55" />
+               </effect>
+            </Pane>
+         </children></AnchorPane>
+      <JFXButton layoutY="851.0" onAction="#logOutButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الخروج">
+         <graphic>
+            <ImageView fitHeight="125.0" fitWidth="32.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="btnStyle">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="31.0" layoutY="170.0" prefHeight="577.0" prefWidth="1139.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <JFXButton alignment="CENTER_RIGHT" layoutX="421.0" layoutY="783.0" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: #0061ff;" text="تصدير البيانات" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.08" contrast="0.59" saturation="-0.17" />
+         </effect>
+         <graphic>
+            <FontAwesomeIcon blendMode="SCREEN" glyphName="UPLOAD" glyphStyle="-fx-fill:#F2F2F2" stroke="#d8e7ff" wrappingWidth="18.40003275871277" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" layoutX="579.0" layoutY="783.0" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: #0061ff;" text="إستراد البيانات" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.08" contrast="0.59" saturation="-0.17" />
+         </effect>
+         <graphic>
+            <FontAwesomeIcon blendMode="SCREEN" glyphName="DOWNLOAD" glyphStyle="-fx-fill:#F2F2F2" stroke="#d8e7ff" wrappingWidth="18.40003275871277" />
+         </graphic>
+      </JFXButton>
+      
+    </children>
+</AnchorPane>

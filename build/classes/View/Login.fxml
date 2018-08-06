@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="788.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <AnchorPane layoutX="-5.0" layoutY="-7.0" opacity="0.64" prefHeight="894.0" prefWidth="590.0" style="-fx-background-color: #0092ff;">
+         <children>
+            <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="265.0" layoutY="274.0" text="" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="585.0" prefHeight="887.0" prefWidth="598.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="210.0" layoutY="103.0" prefHeight="78.0" prefWidth="177.0" text="تسجيل الدخول" textFill="#0092ff" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="211.0">
+               <font>
+                  <Font name="Arial Bold" size="37.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="JFXEmailInput" alignment="CENTER" labelFloat="true" layoutX="147.0" layoutY="259.0" prefHeight="44.0" prefWidth="320.0" promptText="البريد الإلكتروني" unFocusColor="#467a9c">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="JFXPWDInput" alignment="CENTER" labelFloat="true" layoutX="147.0" layoutY="356.0" prefHeight="44.0" prefWidth="320.0" promptText="كلمة المرور" unFocusColor="#467a9c">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXCheckBox fx:id="CheckBoxSavingLogin" alignment="CENTER" checkedColor="#0092ff" layoutX="110.0" layoutY="454.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="216.0" text="حفظ كلمة المرور" textAlignment="RIGHT" textFill="#313b41">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton fx:id="ButtonCancel" layoutX="147.0" layoutY="532.0" onAction="#closeButton" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #0092ff;" styleClass="btnStyle" stylesheets="@SmsCss.css" text="إلغاء" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ButtonLogin" layoutX="339.0" layoutY="532.0" onAction="#loginButton" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #0092ff;" styleClass="btnStyle" stylesheets="@SmsCss.css" text="دخول" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

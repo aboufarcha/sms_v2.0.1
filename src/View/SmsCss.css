@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 30, 2018, 4:17:10 PM
+    Author     : abouf
+*/
+
+.btnStyle{
+    -fx-background-radius: 30px;
+}
+
+.logout{
+    -fx-background-color: transparent;
+}
+
+.gridPane{
+    -fx-background-color:  #7bc2f9;
+}
+
+AnchorPane:hover .gridPane{
+    -fx-background-color:  #bce6ff;
+}
+.closeButton{
+    -fx-background-color: transparent;
+}
+
+
+.ImageCircle{
+    -fx-border-radius:100%;
+-fx-background-radius: 100%;
+ -fx-background-color:  #f9ec9c;
+}
+
+.ignorButton{
+   -fx-background-color: transparent;
+}
