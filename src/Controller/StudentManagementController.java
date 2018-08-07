@@ -57,6 +57,16 @@ public class StudentManagementController implements Initializable {
 
     @FXML
     private void addStudentButton(MouseEvent event) {
+         try{
+            Parent Page = FXMLLoader.load(getClass().getResource("/View/AddStudent.fxml"));
+            Scene = new Scene(Page);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.close();
+            appStage.setScene(Scene);
+            appStage.show();   
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
     }
 
     @FXML

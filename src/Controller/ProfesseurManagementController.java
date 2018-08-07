@@ -86,6 +86,16 @@ public class ProfesseurManagementController implements Initializable {
 
     @FXML
     private void addProfesseurButton(MouseEvent event) {
+        try{
+            Parent Page = FXMLLoader.load(getClass().getResource("/View/AddProfesseur.fxml"));
+            Scene = new Scene(Page);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.close();
+            appStage.setScene(Scene);
+            appStage.show();   
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
     }
 
     @FXML

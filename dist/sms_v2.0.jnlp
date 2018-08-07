@@ -16,7 +16,7 @@
     <jar href="lib\jfoenix.jar" size="2211776" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
     <jar href="lib\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" size="1366247" download="eager" />
-    <jar href="sms_v2.0.jar" size="450394" download="eager" />
+    <jar href="sms_v2.0.jar" size="451149" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="sms_v2.0" >
     <param name="requiredFXVersion" value="8.0+"/>
