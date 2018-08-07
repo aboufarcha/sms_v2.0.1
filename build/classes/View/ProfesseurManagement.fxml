@@ -20,7 +20,7 @@
         <AnchorPane prefHeight="6.0" prefWidth="1200.0" style="-fx-background-color: #7bf9d6;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane layoutY="6.0" prefHeight="34.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1020.0" layoutY="2.0" prefHeight="35.0" prefWidth="166.0" text="إدراة الطلاب" textFill="#5c5b5b">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1020.0" layoutY="2.0" prefHeight="35.0" prefWidth="166.0" text="إدراة الأساتذة" textFill="#5c5b5b">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font></Label>

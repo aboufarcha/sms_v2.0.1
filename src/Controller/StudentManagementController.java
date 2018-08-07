@@ -18,7 +18,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -27,11 +29,15 @@ import javafx.stage.Stage;
  */
 public class StudentManagementController implements Initializable {
 
+    
+    
+   
     @FXML
     private JFXButton backToDashboardButton;
-    private Scene Scene;
-
-
+    
+ private Scene Scene;
+    
+    
     /**
      * Initializes the controller class.
      */
@@ -55,6 +61,7 @@ public class StudentManagementController implements Initializable {
     private void studentListButton(MouseEvent event) {
     }
 
+    
     @FXML
     private void addStudentButton(MouseEvent event) {
          try{
@@ -68,10 +75,23 @@ public class StudentManagementController implements Initializable {
             System.out.println("Error est : "+e.getMessage());
         }
     }
-
+    
     @FXML
     private void exportImportButton(MouseEvent event) {
+        try{
+            Stage stage = new Stage();
+                Parent root = FXMLLoader.load(ProfesseurManagementController.class.getResource("/View/ExportImport.fxml"));
+                stage.setScene(new Scene(root));
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initModality(Modality.WINDOW_MODAL);
+                stage.initOwner(
+                    ((Node)event.getSource()).getScene().getWindow() );
+                stage.show();
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
     }
+
 
     @FXML
     private void logOutButton(ActionEvent event) {
@@ -102,6 +122,14 @@ public class StudentManagementController implements Initializable {
         }catch(Exception e){
         
         }
+    }
+
+    @FXML
+    private void closeModalWindowButton(ActionEvent event) {
+    }
+
+    @FXML
+    private void downloadButton(MouseEvent event) {
     }
     
 }

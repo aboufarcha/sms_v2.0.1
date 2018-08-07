@@ -18,7 +18,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -37,7 +39,19 @@ public class ProfesseurManagementController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
+
+    @FXML
+    private void closeModalWindowButton(ActionEvent event) {
+        Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
+        stage.close();
+    }
+
+
+
+    @FXML
+    private void downloadProfesseurButton(MouseEvent event) {
+    }
 
     @FXML
     private void closeWindowButton(ActionEvent event) {
@@ -60,9 +74,9 @@ public class ProfesseurManagementController implements Initializable {
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
-        
+
         }
     }
 
@@ -74,9 +88,9 @@ public class ProfesseurManagementController implements Initializable {
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
-        
+
         }
     }
 
@@ -92,7 +106,7 @@ public class ProfesseurManagementController implements Initializable {
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
             System.out.println("Error est : "+e.getMessage());
         }
@@ -100,6 +114,19 @@ public class ProfesseurManagementController implements Initializable {
 
     @FXML
     private void exportImportProfesseurButton(MouseEvent event) {
+        try{
+            Stage stage = new Stage();
+                Parent root = FXMLLoader.load(ProfesseurManagementController.class.getResource("/View/ExportImportProfesseur.fxml"));
+                stage.setScene(new Scene(root));
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initModality(Modality.WINDOW_MODAL);
+                stage.initOwner(
+                    ((Node)event.getSource()).getScene().getWindow() );
+                stage.show();
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
     }
-    
+
+
 }
