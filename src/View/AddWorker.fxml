@@ -168,11 +168,11 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="41.0" layoutY="520.0" prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane layoutX="41.0" layoutY="520.0" onMouseClicked="#uploadImageButton" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <AnchorPane prefHeight="161.0" prefWidth="152.0" styleClass="ImageCircle" stylesheets="@SmsCss.css">
                            <children>
-                              <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageCircle" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="27.0">
+                              <ImageView fx:id="ImageWorker" fitHeight="105.0" fitWidth="111.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageCircle" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="27.0">
                                  <image>
                                     <Image url="@../images/worker.png" />
                                  </image>

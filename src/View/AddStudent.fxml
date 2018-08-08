@@ -6,6 +6,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -43,7 +44,7 @@
       </AnchorPane>
       <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutX="901.0" layoutY="81.0" prefHeight="815.0" prefWidth="864.0" text="معلومات أولية">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="818.0" prefWidth="862.0" stylesheets="@SmsCss.css">
+          <AnchorPane fx:id="" minHeight="0.0" minWidth="0.0" prefHeight="818.0" prefWidth="862.0" stylesheets="@SmsCss.css">
                <children>
                   <JFXTextField alignment="TOP_RIGHT" layoutX="644.0" layoutY="31.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="180.0" promptText="رقم التسجيل ">
                      <font>
@@ -180,13 +181,16 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="41.0" layoutY="563.0" prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane layoutX="41.0" layoutY="563.0" onMouseClicked="#uploadImageButton" prefHeight="225.0" prefWidth="183.0">
                      <children>
-                        <AnchorPane prefHeight="161.0" prefWidth="152.0" styleClass="ImageCircle" stylesheets="@SmsCss.css">
+                        <AnchorPane fx:id="uploadImage" prefHeight="161.0" prefWidth="152.0" styleClass="ImageCircle" stylesheets="@SmsCss.css">
                            <children>
-                              <ImageView fitHeight="285.0" fitWidth="139.0" layoutX="13.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageCircle" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.599999999999994" AnchorPane.topAnchor="11.0">
+                              <ImageView fx:id="ImageStudent" fitHeight="179.0" fitWidth="132.0" layoutX="13.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageCircle" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="11.0">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
                                  <image>
-                                    <Image url="@../images/student.png" />
+                                    <Image  url="@../images/student.png" />
                                  </image>
                               </ImageView>
                               <Button alignment="TOP_RIGHT" contentDisplay="TOP" layoutX="107.0" layoutY="3.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="54.0" styleClass="ignorButton" text="X" textFill="RED">

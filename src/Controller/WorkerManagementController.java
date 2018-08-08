@@ -9,6 +9,7 @@ import DAO.PrivilegeDAO;
 import Model.Authentication;
 import Model.Privilege;
 import com.jfoenix.controls.JFXButton;
+import java.io.File;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
@@ -27,7 +28,11 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.CheckBoxTreeItem;
 import javafx.scene.control.cell.CheckBoxTreeCell;
 import javafx.scene.control.TreeView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.CheckTreeView;
 
@@ -44,6 +49,10 @@ public class WorkerManagementController implements Initializable {
     
     @FXML
     private TreeView PrivilegesTreeView;
+    @FXML
+    private ImageView ImageWorker;
+
+   
 
     /**
      * Initializes the controller class.
@@ -166,7 +175,30 @@ public class WorkerManagementController implements Initializable {
         }catch(Exception e){
         
         }
+       
     }
-
+    
+     @FXML 
+    private void uploadImageButton(MouseEvent event){
+        FileChooser fileChooser = new FileChooser();
+                fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files",
+                        "*.bmp", "*.png", "*.jpg", "*.gif"));
+        File selectedFile = fileChooser.showOpenDialog(new Stage());
+        if (selectedFile != null) {
+            try{
+              String imagepath = selectedFile.toURI().toURL().toString();
+              System.out.println("file:"+imagepath);
+              Image image = new Image(imagepath);
+              ImageWorker.setImage(image);
+             
+               
+            }catch(Exception e){
+                System.out.println(" Error is : "+e);
+            }
+        }
+    }
+    
+    
     
 }

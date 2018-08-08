@@ -32,6 +32,7 @@ AnchorPane:hover .gridPane{
     -fx-border-radius:100%;
 -fx-background-radius: 100%;
  -fx-background-color:  #f9ec9c;
+ -fx-background-radius: 100;
 }
 
 .ignorButton{
