@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/Controller/WorkerManagementController.java</file>
-            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/Controller/AgendaManagementController.java</file>
+            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/Controller/StudentManagementController.java</file>
+            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/View/Sms.java</file>
+            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/Controller/AdminDashboardController.java</file>
+            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/View/ExportImport.fxml</file>
+            <file>file:/C:/Users/abouf/Documents/GitHub/sms_v2.0/src/Controller/ProfesseurManagementController.java</file>
         </group>
     </open-files>
 </project-private>

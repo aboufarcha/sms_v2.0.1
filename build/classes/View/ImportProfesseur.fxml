@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="900" style="-fx-border-width: 2px; -fx-border-color: #b0ff00;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfesseurManagementController">
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="900" style="-fx-border-width: 2px; -fx-border-color: #b0ff00;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfesseurManagementController">
     <stylesheets>
         <URL value="@SmsCss.css" />
     </stylesheets>
@@ -36,11 +36,11 @@
             </Button>
          </children>
       </AnchorPane>
-      <TitledPane alignment="CENTER" animated="false" layoutX="305.0" layoutY="373.0" prefHeight="181.0" prefWidth="290.0" text="إستراد حسب المستوى">
+      <TitledPane alignment="CENTER" animated="false" layoutX="534.0" layoutY="60.0" prefHeight="181.0" prefWidth="290.0" text="إستراد حسب الأستاذ">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="124.0" prefWidth="289.0">
                <children>
-                  <JFXComboBox layoutX="22.0" layoutY="32.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="246.0" promptText="إختيار المستوى" />
+                  <JFXComboBox layoutX="22.0" layoutY="32.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="246.0" promptText="إختيار الأستاذ" />
                   <JFXButton layoutX="97.0" layoutY="92.0" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #b0ff00;" text="تحميل" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="17.0" />
@@ -71,25 +71,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </TitledPane>
-      <TitledPane alignment="CENTER" animated="false" layoutX="532.0" layoutY="60.0" prefHeight="278.0" prefWidth="290.0" text="إستراد حسب الأستاذ المدرس">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="289.0">
-               <children>
-                  <JFXComboBox layoutX="22.0" layoutY="89.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="246.0" promptText="إختيار الأستاذ" />
-                  <JFXButton layoutX="97.0" layoutY="147.0" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #b0ff00;" text="تحميل" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="17.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXComboBox layoutX="21.0" layoutY="33.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="246.0" promptText="إختيار المادة" />
-               </children>
-            </AnchorPane>
-         </content>
-         <font>
-            <Font name="Arial Bold" size="16.0" />
-         </font>
-      </TitledPane>
-      <JFXButton fx:id="backToDashboardButton" layoutX="2.0" layoutY="571.0" onAction="#goBackModalButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الرجوع">
+      <JFXButton fx:id="backToDashboardButton" layoutX="2.0" layoutY="420.0" onAction="#goBackModalButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الرجوع">
          <graphic>
             <ImageView fitHeight="125.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="btnStyle">
                <image>

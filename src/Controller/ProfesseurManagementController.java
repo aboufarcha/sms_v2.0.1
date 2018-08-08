@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -83,14 +84,18 @@ public class ProfesseurManagementController implements Initializable {
     @FXML
     private void goToBackButton(ActionEvent event) {
         try{
-            Parent HomePage = FXMLLoader.load(getClass().getResource("/View/Dashboard.fxml"));
+            Parent HomePage;
+            if(event.getSource() == backToDashboardButton)
+                    HomePage = FXMLLoader.load(getClass().getResource("/View/Dashboard.fxml"));
+            else
+                HomePage = FXMLLoader.load(getClass().getResource("/View/ProfesseurManagement.fxml"));
             Scene = new Scene(HomePage);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();
+            appStage.show();   
         }catch(Exception e){
-
+        
         }
     }
 
@@ -127,6 +132,38 @@ public class ProfesseurManagementController implements Initializable {
             System.out.println("Error est : "+e.getMessage());
         }
     }
+    
+    @FXML
+    private void goBackModalButton(ActionEvent event){
+        try{
+            Stage stage = new Stage();
+                Parent root = FXMLLoader.load(ProfesseurManagementController.class.getResource("/View/ExportImportProfesseur.fxml"));
+                stage.setScene(new Scene(root));
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initModality(Modality.WINDOW_MODAL);
+                ((Stage)((Button)event.getSource()).getScene().getWindow()).close();
+                stage.initOwner(
+                    ((Node)event.getSource()).getScene().getWindow() );
+                stage.show();
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
+    }
 
-
+    @FXML
+    private void uploadButton(MouseEvent event){
+        try{
+            Stage stage = new Stage();
+                Parent root = FXMLLoader.load(ProfesseurManagementController.class.getResource("/View/ImportProfesseur.fxml"));
+                stage.setScene(new Scene(root));
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initModality(Modality.WINDOW_MODAL);
+                ((Stage)((AnchorPane)event.getSource()).getScene().getWindow()).close();
+                stage.initOwner(
+                    ((Node)event.getSource()).getScene().getWindow() );
+                stage.show();
+        }catch(Exception e){
+            System.out.println("Error est : "+e.getMessage());
+        }
+    }
 }

@@ -45,7 +45,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-             <AnchorPane prefHeight="303.0" prefWidth="280.0" style="-fx-background-color: #ffffff;">
+             <AnchorPane onMouseClicked="#uploadButton" prefHeight="303.0" prefWidth="280.0" style="-fx-background-color: #ffffff;">
                <children>
                   <AnchorPane layoutY="79.0" prefHeight="231.0" prefWidth="280.0" style="-fx-background-color: #b0ff00;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
