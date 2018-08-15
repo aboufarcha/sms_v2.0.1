@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="914.0" style="-fx-border-color: #ffdb00; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpecialtyManagementController">
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="914.0" style="-fx-border-color: #ffdb00; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClassroomManagementController">
     <stylesheets>
         <URL value="@SmsCss.css" />
     </stylesheets>
@@ -21,7 +21,7 @@
       <AnchorPane layoutX="302.0" layoutY="4.0" prefHeight="5.0" prefWidth="950.0" style="-fx-background-color: #ffdb00;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane layoutX="2.0" layoutY="13.0" prefHeight="46.0" prefWidth="910.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1144.6" layoutY="2.0" prefHeight="35.0" prefWidth="166.0" text="إضافة تخصص" textFill="#5c5b5b" AnchorPane.rightAnchor="14.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1144.6" layoutY="2.0" prefHeight="35.0" prefWidth="166.0" text="إضافة قاعة" textFill="#5c5b5b" AnchorPane.rightAnchor="14.0">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
@@ -38,26 +38,20 @@
             </Button>
          </children>
       </AnchorPane>
-      <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutX="493.0" layoutY="95.0" prefHeight="206.0" prefWidth="864.0" text="معلومات التخصص" AnchorPane.rightAnchor="25.0">
+      <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutX="493.0" layoutY="95.0" prefHeight="194.0" prefWidth="864.0" text="معلومات القاعة" AnchorPane.rightAnchor="29.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="862.0" stylesheets="@SmsCss.css">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="862.0" stylesheets="@SmsCss.css">
                <children>
-                  <JFXTextField alignment="TOP_RIGHT" labelFloat="true" layoutX="559.0" layoutY="36.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="264.0" promptText="التخصص">
+                  <JFXTextField alignment="TOP_RIGHT" labelFloat="true" layoutX="559.0" layoutY="36.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="264.0" promptText="إسم القاعة">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField alignment="TOP_LEFT" layoutX="22.0" layoutY="29.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="252.0" promptText="Specialité">
+                  <JFXTextField alignment="TOP_LEFT" layoutX="22.0" layoutY="29.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="252.0" promptText="Nom de la salle">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </JFXTextField>
-                  <ComboBox layoutX="430.0" layoutY="98.0" prefHeight="30.0" prefWidth="233.0" />
-                  <Label alignment="CENTER" layoutX="738.0" layoutY="103.0" prefHeight="22.0" prefWidth="84.0" text="السلك">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="535.0" layoutY="39.0" text="*" textFill="RED">
                      <font>
                         <Font name="Arial" size="20.0" />
@@ -68,7 +62,13 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="676.0" layoutY="102.0" text="*" textFill="RED">
+                  <ComboBox layoutX="274.0" layoutY="105.0" prefHeight="30.0" prefWidth="233.0" />
+                  <Label alignment="CENTER" layoutX="561.0" layoutY="105.0" prefHeight="22.0" prefWidth="84.0" text="حالة القاعة">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="534.0" layoutY="105.0" text="*" textFill="RED">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
@@ -82,7 +82,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </TitledPane>
-      <JFXButton layoutX="327.0" layoutY="415.0" onAction="#logOutButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الخروج" AnchorPane.leftAnchor="0.0">
+      <JFXButton layoutX="327.0" layoutY="415.0" onAction="#logOutButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الخروج" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <graphic>
             <ImageView fitHeight="125.0" fitWidth="32.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="btnStyle">
                <image>
@@ -94,7 +94,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="goBackButton" layoutX="437.0" layoutY="415.0" onAction="#goToBackButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الرجوع" AnchorPane.leftAnchor="111.0">
+      <JFXButton fx:id="goBackButton" layoutX="437.0" layoutY="415.0" onAction="#goToBackButton" prefHeight="56.0" prefWidth="111.0" styleClass="logout" stylesheets="@SmsCss.css" text="الرجوع" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="111.0">
          <graphic>
             <ImageView fitHeight="125.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="btnStyle">
                <image>
@@ -106,7 +106,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER_RIGHT" layoutX="23.0" layoutY="320.0" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #ffdb00;" text="حفظ " textAlignment="RIGHT" textFill="WHITE">
+      <JFXButton alignment="CENTER_RIGHT" layoutX="23.0" layoutY="312.0" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #ffdb00;" text="حفظ " textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font name="Arial" size="24.0" />
          </font>

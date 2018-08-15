@@ -25,20 +25,20 @@ import javafx.stage.Stage;
  *
  * @author abouf
  */
-public class SpecialtyManagementController implements Initializable {
-
-    @FXML
-    private JFXButton backToDashboardButton;
-    private Scene Scene;
+public class ClassroomManagementController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
+    private Scene Scene;
+    @FXML
+    private JFXButton backToDashboardButton;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+    
     @FXML
     private void closeWindowButton(ActionEvent event) {
         System.exit(0);
@@ -46,12 +46,12 @@ public class SpecialtyManagementController implements Initializable {
 
     @FXML
     private void minimizeWindowButton(ActionEvent event) {
-       ((Stage)((Button)event.getSource()).getScene().getWindow()).setIconified(true);
+         ((Stage)((Button)event.getSource()).getScene().getWindow()).setIconified(true);
     }
 
     @FXML
-     private void logOutButton(ActionEvent event) {
-         try{
+    private void logOutButton(ActionEvent event) {
+        try{
             Authentication.IsConnected=false;
             Authentication.removeTempFile();
             Authentication.admin = null;
@@ -60,19 +60,20 @@ public class SpecialtyManagementController implements Initializable {
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
+
         }
     }
 
     @FXML
     private void goToBackButton(ActionEvent event) {
-         try{
+        try{
             Parent HomePage;
             if(event.getSource() == backToDashboardButton)
                     HomePage = FXMLLoader.load(getClass().getResource("/View/Dashboard.fxml"));
             else
-                HomePage = FXMLLoader.load(getClass().getResource("/View/SpecialtyManagement.fxml"));
+                HomePage = FXMLLoader.load(getClass().getResource("/View/ClassroomManagement.fxml"));
             Scene = new Scene(HomePage);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
@@ -84,43 +85,29 @@ public class SpecialtyManagementController implements Initializable {
     }
     
     @FXML
-    private void addSpecialtyButton(MouseEvent event){
-      try{
-            Parent Page = FXMLLoader.load(getClass().getResource("/View/AddSpecialty.fxml"));
+    private void classroomListButton(MouseEvent event){
+        try{
+            Parent Page = FXMLLoader.load(getClass().getResource("/View/ClassroomList.fxml"));
             Scene = new Scene(Page);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
             System.out.println("Error est : "+e.getMessage());
         }
     
     }
     
-    @FXML 
-    private void addCycleButton(MouseEvent event){
-       try{
-            Parent Page = FXMLLoader.load(getClass().getResource("/View/AddLevel.fxml"));
+    @FXML
+    private void addClassroomButton(MouseEvent event){
+         try{
+            Parent Page = FXMLLoader.load(getClass().getResource("/View/AddClassroom.fxml"));
             Scene = new Scene(Page);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.close();
             appStage.setScene(Scene);
-            appStage.show();   
-        }catch(Exception e){
-            System.out.println("Error est : "+e.getMessage());
-        }
-    }
-    
-    @FXML 
-    private void specialtiesListButton(MouseEvent event){
-       try{
-            Parent Page = FXMLLoader.load(getClass().getResource("/View/SpecialtyList.fxml"));
-            Scene = new Scene(Page);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.close();
-            appStage.setScene(Scene);
-            appStage.show();   
+            appStage.show();
         }catch(Exception e){
             System.out.println("Error est : "+e.getMessage());
         }
